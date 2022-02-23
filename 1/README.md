@@ -16,7 +16,7 @@ $ git clone https://github.com/Tyks23/flutter-mobiilirakendused.git
 $ cd flutter-mobiilirakendused/1/
 $ flutter pub get  
 ```
-Käivita android emulator või 
+Käivita android emulator või ühenda android arvutiga
 ```
 $ flutter run
 ```
