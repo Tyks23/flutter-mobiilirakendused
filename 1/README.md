@@ -13,13 +13,13 @@ Random sõnad ja midagi taolist.
 
 
 ## Projekti Githubist kätte saamine 
-klooni grupi github repo
+Klooni grupi github repo
 ```
 $ git clone https://github.com/Tyks23/flutter-mobiilirakendused.git
-
+```
 ## Projekti käivitamine
 Ava flutter_console.bat mis tuli kaasa flutter SDK downloadiga
-
+```
 $ cd flutter-mobiilirakendused/#/ <olenevalt mitmendat rakendust käivitada soovid>
 $ flutter pub get  <flutter package-ite jaoks>
 ```
