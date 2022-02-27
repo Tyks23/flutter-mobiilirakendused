@@ -1,3 +1,6 @@
+- [Flutteri paigaldus ja IDE setup](https://docs.flutter.dev/get-started/install)
+- [Android studio(https://developer.android.com/studio)
+
 ## Projekti Githubist kätte saamine 
 Klooni grupi github repo
 ```
@@ -13,4 +16,3 @@ Käivita android emulator või ühenda android arvutiga
 ```
 $ flutter run <palub valida mitme erineva programmi vahel milles emulaatorit jooksustada, mul töötab Chrome kõige paremini>
 ```
-
