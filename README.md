@@ -1,5 +1,5 @@
 - [Flutteri paigaldus ja IDE setup](https://docs.flutter.dev/get-started/install)
-- [Android studio(https://developer.android.com/studio)
+- [Android studio](https://developer.android.com/studio)
 
 ## Projekti Githubist kätte saamine 
 Klooni grupi github repo
