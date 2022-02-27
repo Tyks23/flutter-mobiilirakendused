@@ -57,6 +57,13 @@ class _RandomWordState extends State<RandomWord> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
+              'Press the red button to generate a random word pair',
+              style: const TextStyle(
+                  fontSize: 20.0,
+                  height: 6,
+              ),
+            ),
+            Text(
               wordPair,
               style: const TextStyle(fontSize: 20.0),
             ),
