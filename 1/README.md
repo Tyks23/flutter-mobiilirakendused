@@ -12,9 +12,15 @@ Random sõnad ja midagi taolist.
 - [Flutteri paigaldus ja IDE setup](https://docs.flutter.dev/get-started/install)
 
 ```
+## Projekti Githubist kätte saamine 
+klooni grupi github repo
 $ git clone https://github.com/Tyks23/flutter-mobiilirakendused.git
-$ cd flutter-mobiilirakendused/1/
-$ flutter pub get  
+
+## Projekti käivitamine
+Ava flutter_console.bat mis tuli kaasa flutter SDK downloadiga
+
+$ cd flutter-mobiilirakendused/#/ <olenevalt mitmendat rakendust käivitada soovid>
+$ flutter pub get  <flutter package-ite jaoks>
 ```
 Käivita android emulator või ühenda android arvutiga
 ```
