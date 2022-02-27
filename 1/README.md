@@ -11,9 +11,10 @@ Random sõnad ja midagi taolist.
 
 - [Flutteri paigaldus ja IDE setup](https://docs.flutter.dev/get-started/install)
 
-```
+
 ## Projekti Githubist kätte saamine 
 klooni grupi github repo
+```
 $ git clone https://github.com/Tyks23/flutter-mobiilirakendused.git
 
 ## Projekti käivitamine
