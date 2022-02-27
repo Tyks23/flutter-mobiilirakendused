@@ -25,7 +25,7 @@ $ flutter pub get  <flutter package-ite jaoks>
 ```
 Käivita android emulator või ühenda android arvutiga
 ```
-$ flutter run
+$ flutter run <palub valida mitme erineva programmi vahel milles emulaatorit jooksustada, mul töötab Chrome kõige paremini>
 ```
 
 
