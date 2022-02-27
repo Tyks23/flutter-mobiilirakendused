@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rühm 2',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.red,
       ),
       home: const RandomWord(title: 'Rühm 2, Flutter'),
     );
