@@ -1,27 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+    home: FirstRoute(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class FirstRoute extends StatelessWidget {
+  const FirstRoute({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.amber,
-        appBar: AppBar(
-          backgroundColor: Colors.amberAccent,
-          title: const Text('Kollane app'),
-        ),
-        body: ElevatedButton(
-          child: const Text('Punane leht'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Blue page'),
+        leading: ElevatedButton(
+          child: const Text('Red'),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const MyApp2()),
+              MaterialPageRoute(builder: (context) => const SecondRoute()),
+            );
+          },
+        ),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('Go to Red page'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SecondRoute()),
             );
           },
         ),
@@ -30,17 +39,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyApp2 extends StatelessWidget {
-  const MyApp2({Key? key}) : super(key: key);
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.red,
-        appBar: AppBar(
-          backgroundColor: Colors.redAccent,
-          title: const Text('Punane app'),
+        title: const Text('Red page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back to Blue page!'),
         ),
       ),
     );
