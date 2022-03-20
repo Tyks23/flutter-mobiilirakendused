@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
+import 'package:sensorid/motion.dart';
 import 'cameraScreen.dart';
 import 'dart:async';
 import 'dart:io';
@@ -21,6 +23,7 @@ Future<void> main() async {
     routes: {
       '/': (context) => HomeScreen(),
       '/cam': (context) => TakePictureScreen(camera: firstCamera),
+      //'/sensor': (context) => MyApp2()
     },
     theme: ThemeData.dark(),
   ));
@@ -36,13 +39,28 @@ class HomeScreen extends StatelessWidget {
           title: const Text('Blue page'),
           backgroundColor: Colors.blue,
         ),
-        floatingActionButton: FloatingActionButton(
-          heroTag: "cameraRoute",
-          onPressed: () {
-            Navigator.pushNamed(context, '/cam');
-          },
-          child: const Icon(Icons.camera_alt),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FloatingActionButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cam');
+              },
+              child: const Icon(Icons.camera_alt),
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                //Navigator.pushNamed(context, '/sensor');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyApp2(),
+                  ),
+                );
+              },
+              child: const Icon(Icons.ac_unit),
+            ),
+          ],
+        ));
   }
 }
