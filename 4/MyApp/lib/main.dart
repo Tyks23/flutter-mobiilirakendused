@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
+import 'package:sensorid/motion.dart';
 import 'cameraScreen.dart';
 import 'dart:async';
 import 'dart:io';
@@ -21,6 +23,7 @@ Future<void> main() async {
     routes: {
       '/': (context) => HomeScreen(),
       '/cam': (context) => TakePictureScreen(camera: firstCamera),
+      '/sensor': (context) => MyApp2(),
     },
     theme: ThemeData.dark(),
   ));
@@ -32,17 +35,38 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Blue page'),
-          backgroundColor: Colors.blue,
-        ),
-        floatingActionButton: FloatingActionButton(
-          heroTag: "cameraRoute",
-          onPressed: () {
-            Navigator.pushNamed(context, '/cam');
-          },
-          child: const Icon(Icons.camera_alt),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
+      appBar: AppBar(
+        title: const Text('Blue page'),
+        backgroundColor: Colors.blue,
+      ),
+      floatingActionButton: Wrap(
+        //will break to another line on overflow
+        direction: Axis.horizontal, //use vertical to show  on vertical axis
+        children: <Widget>[
+          Container(
+              margin: EdgeInsets.only(top: 20, left: 10, right: 10),
+              child: FloatingActionButton(
+                heroTag: "camera",
+                onPressed: () {
+                  Navigator.pushNamed(context, '/cam');
+                },
+                child: const Icon(Icons.camera_alt),
+              )), //button first
+
+          Container(
+              margin: EdgeInsets.only(top: 20),
+              child: FloatingActionButton(
+                heroTag: "sensors",
+                onPressed: () {
+                  Navigator.pushNamed(context, '/sensor');
+                },
+                child: const Icon(Icons.ac_unit),
+              )), // button second // button third
+
+          // Add more buttons here
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
   }
 }
