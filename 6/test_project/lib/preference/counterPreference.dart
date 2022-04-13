@@ -1,18 +1,25 @@
 import 'dart:async';
+import 'dart:io';
+import 'package:android_path_provider/android_path_provider.dart';
 
-import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
+Future<String> getExternalStorageDirectory() async {
+  final directory = await AndroidPathProvider.documentsPath;
+  String appDocumentsPath = directory;
+  String filePath = '$appDocumentsPath/counter.txt';
+  return filePath;
+}
 
 class CounterPreference {
-  static const PREF_KEY = "counter_key";
-
   setCounter(int value) async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setInt(PREF_KEY, value);
+    File file = File(await getExternalStorageDirectory());
+    file.writeAsString(value.toString());
+
   }
 
   getCounter() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    return sharedPreferences.getInt(PREF_KEY) ?? false;
+    File file = File(await getExternalStorageDirectory());
+    String fileContent = await file.readAsString();
+    return int.parse(fileContent);
   }
 }

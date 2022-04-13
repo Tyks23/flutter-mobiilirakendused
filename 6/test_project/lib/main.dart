@@ -22,15 +22,8 @@ Future<void> main() async {
   final firstCamera = cameras.first;
 
   runApp(
-    MyApp(camera: firstCamera));
-    // initialRoute: '/',
-    // routes: {
-    //   '/': (context) => MyApp(),
-    //   '/cam': (context) => TakePictureScreen(camera: firstCamera),
-    //   '/sensor': (context) => MyApp2(),
-    //   '/ar': (context) => ObjectsOnPlanesWidget(),
-    // }
-
+    MyApp(camera: firstCamera)
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -44,9 +37,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => ThemeModel(),
-      child: Consumer<ThemeModel>(
-          builder: (context, ThemeModel themeNotifier, child) {
+      create: (_) => PreferencesModel(),
+      child: Consumer<PreferencesModel>(
+          builder: (context, PreferencesModel themeNotifier, child) {
             return MaterialApp(
               title: 'Flutter Demo',
               theme: themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
@@ -77,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
   });
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeModel>(
-        builder: (context, ThemeModel themeNotifier, child) {
+    return Consumer<PreferencesModel>(
+        builder: (context, PreferencesModel themeNotifier, child) {
           return Scaffold(
             appBar: AppBar(
               title: Text(themeNotifier.isDark ? "Dark Mode" : "Light Mode"),
@@ -135,9 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: const Icon(Icons.settings),
-                    )), // bu// button second // button third
-
-                // Add more buttons here
+                    )),
               ],
             ),
             floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

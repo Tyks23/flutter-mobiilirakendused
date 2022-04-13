@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-
+import 'package:gallery_saver/gallery_saver.dart';
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
   const TakePictureScreen({
@@ -139,6 +139,20 @@ class DisplayPictureScreen extends StatelessWidget {
       // The image is stored as a file on the device. Use the `Image.file`
       // constructor with the given path to display the image.
       body: Image.file(File(imagePath)),
-    );
+        floatingActionButton: Wrap(
+          //will break to another line on overflow
+            direction: Axis.horizontal, //use vertical to show  on vertical axis
+            children: <Widget>[
+        Container(
+        margin: EdgeInsets.only(top: 20, left: 10, right: 10),
+        child: FloatingActionButton(
+          heroTag: "save",
+          onPressed: () async {
+            GallerySaver.saveImage(imagePath);
+          },
+          child: const Icon(Icons.save),
+        )), //button first
+
+    ]));
   }
 }
