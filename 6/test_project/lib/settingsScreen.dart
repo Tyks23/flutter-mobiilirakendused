@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'models/theme_model.dart';
 
 class Settings extends StatefulWidget {
+  const Settings({Key? key}) : super(key: key);
+
   @override
   _Settings createState() => _Settings();
 }
@@ -11,8 +12,8 @@ class Settings extends StatefulWidget {
 class _Settings extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeModel>(
-        builder: (context, ThemeModel themeNotifier, child) {
+    return Consumer<PreferencesModel>(
+        builder: (context, PreferencesModel themeNotifier, child) {
       return Scaffold(
         appBar: AppBar(
           title: Text(themeNotifier.isDark ? "Dark Mode" : "Light Mode"),
@@ -38,7 +39,7 @@ class _Settings extends State<Settings> {
             Container(
                 margin: EdgeInsets.only(left:10,top: 20),
                 child: FloatingActionButton(
-                  heroTag: "theme",
+                  heroTag: "counter",
                   onPressed: () {
                     themeNotifier.count++;
 

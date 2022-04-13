@@ -44,6 +44,8 @@ dependencies:
   ar_flutter_plugin: ^0.6.2
   provider:
   shared_preferences:
+  gallery_saver:
+  android_path_provider:
 
 
 dev_dependencies:
