@@ -1,0 +1,79 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.test_project"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:6:5-67
+14-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:2:5-65
+15-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:2:22-62
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:3:5-81
+16-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:3:22-77
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:4:5-82
+17-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:4:22-78
+18    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+18-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:5:5-83
+18-->/home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/android/app/src/main/AndroidManifest.xml:5:22-79
+19    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+19-->[:camera] /home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-71
+19-->[:camera] /home/karljanar/Documents/CSCode/flutter-mobiilirakendused/6/test_project/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-68
+20
+21    <application
+22        android:name="android.app.Application"
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.6.0] /home/karljanar/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+26        android:label="test_project"
+27        android:requestLegacyExternalStorage="true"
+28        android:usesCleartextTraffic="true" >
+29        <activity
+30            android:name="com.example.test_project.MainActivity"
+31            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+32            android:exported="true"
+33            android:hardwareAccelerated="true"
+34            android:launchMode="singleTop"
+35            android:theme="@style/LaunchTheme"
+36            android:windowSoftInputMode="adjustResize" >
+37            <meta-data
+38                android:name="io.flutter.embedding.android.NormalTheme"
+39                android:resource="@style/NormalTheme" />
+40
+41            <intent-filter>
+42                <action android:name="android.intent.action.MAIN" />
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+45            </intent-filter>
+46        </activity>
+47
+48        <meta-data
+49            android:name="flutterEmbedding"
+50            android:value="2" />
+51
+52        <uses-library
+52-->[androidx.window:window:1.0.0-beta04] /home/karljanar/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+53            android:name="androidx.window.extensions"
+53-->[androidx.window:window:1.0.0-beta04] /home/karljanar/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+54            android:required="false" />
+54-->[androidx.window:window:1.0.0-beta04] /home/karljanar/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+55        <uses-library
+55-->[androidx.window:window:1.0.0-beta04] /home/karljanar/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+56            android:name="androidx.window.sidecar"
+56-->[androidx.window:window:1.0.0-beta04] /home/karljanar/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+57            android:required="false" />
+57-->[androidx.window:window:1.0.0-beta04] /home/karljanar/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+58    </application>
+59
+60</manifest>

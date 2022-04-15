@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:1:1-15:12
+INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:1:1-15:12
+INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:1:1-15:12
+	package
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:1:70-112
+		INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
+		INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:3:3-63
+	android:name
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:3:20-60
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:4:3-77
+	android:name
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:4:20-74
+uses-feature#0x00030000
+ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:7:3-76
+	android:glEsVersion
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:7:17-49
+	android:required
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:7:50-73
+application
+ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:9:3-13:17
+meta-data#com.google.ar.core
+ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:12:5-77
+	android:value
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:12:50-74
+	android:name
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml:12:16-49
+uses-sdk
+INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
+INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
+		ADDED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
+		INJECTED from /home/karljanar/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ar_flutter_plugin-0.6.2/android/src/main/AndroidManifest.xml
