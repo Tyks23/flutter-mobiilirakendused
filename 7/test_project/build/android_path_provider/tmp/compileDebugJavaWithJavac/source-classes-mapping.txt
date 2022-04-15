@@ -1,0 +1,2 @@
+com/mix1009/android_path_provider/BuildConfig.java
+ com.mix1009.android_path_provider.BuildConfig

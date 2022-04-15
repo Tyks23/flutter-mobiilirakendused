@@ -1,0 +1,2 @@
+io/carius/lars/ar_flutter_plugin/BuildConfig.java
+ io.carius.lars.ar_flutter_plugin.BuildConfig
