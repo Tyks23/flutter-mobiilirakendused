@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'httpServices.dart';
 import 'models/post_model.dart';
 
 class PostDetail extends StatelessWidget {
+  final HttpService httpService = HttpService();
   final Post post;
 
   PostDetail({required this.post});
@@ -11,6 +13,15 @@ class PostDetail extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(post.first_name + " " + post.last_name),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.delete),
+              onPressed:() async{
+                await httpService.deletePost(post.id);
+                Navigator.of(context).pop();
+              },
+            )
+          ],
         ),
         body: SingleChildScrollView(
           child: Padding(
