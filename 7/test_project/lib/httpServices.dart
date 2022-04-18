@@ -26,7 +26,7 @@ class HttpService {
   Future<void> deletePost(int id) async {
     api.Response res = await api.delete(Uri.parse("$postsURL/$id"));
 
-    if (res.statusCode == 200) {
+    if (res.statusCode == 204) {
       print("DELETED");
     } else {
       throw "Unable to delete post.";
