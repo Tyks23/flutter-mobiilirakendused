@@ -33,6 +33,7 @@ class HttpService {
     }
   }
 
+
   Future createPost({required Map body}) async {
     return api.post(Uri.parse("$postsURL"), body: body).then((api.Response response) {
       final int statusCode = response.statusCode;
@@ -45,3 +46,5 @@ class HttpService {
   }
 
 }
+
+
