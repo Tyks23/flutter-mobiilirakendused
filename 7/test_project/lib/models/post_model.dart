@@ -22,7 +22,6 @@ class Post {
       last_name: json['last_name'] as String,
       email: json['email'] as String,
       avatar: json['avatar'] as String,
-
     );
   }
 }

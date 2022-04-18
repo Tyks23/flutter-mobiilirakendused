@@ -14,7 +14,6 @@ class CounterPreference {
   setCounter(int value) async {
     File file = File(await getExternalStorageDirectory());
     file.writeAsString(value.toString());
-
   }
 
   getCounter() async {

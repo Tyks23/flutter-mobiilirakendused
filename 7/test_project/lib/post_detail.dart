@@ -16,7 +16,7 @@ class PostDetail extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.delete),
-              onPressed:() async{
+              onPressed: () async {
                 await httpService.deletePost(post.id);
                 Navigator.of(context).pop();
               },
@@ -32,10 +32,9 @@ class PostDetail extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                       CircleAvatar(
+                      CircleAvatar(
                           backgroundImage: NetworkImage(post.avatar),
-                          radius: 50.0
-                      ),
+                          radius: 50.0),
                       ListTile(
                         title: Text("Name"),
                         subtitle: Text(post.first_name + " " + post.last_name),
@@ -54,7 +53,6 @@ class PostDetail extends StatelessWidget {
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }

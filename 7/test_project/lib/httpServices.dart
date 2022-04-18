@@ -26,11 +26,22 @@ class HttpService {
   Future<void> deletePost(int id) async {
     api.Response res = await api.delete(Uri.parse("$postsURL/$id"));
 
-    if (res.statusCode == 200) {
+    if (res.statusCode == 204) {
       print("DELETED");
     } else {
       throw "Unable to delete post.";
     }
+  }
+
+  Future createPost({required Map body}) async {
+    return api.post(Uri.parse("$postsURL"), body: body).then((api.Response response) {
+      final int statusCode = response.statusCode;
+
+      if (statusCode < 200 || statusCode > 400 || json == null) {
+        throw new Exception("Error while fetching data");
+      }
+      return print("TIMM");
+    });
   }
 
 }

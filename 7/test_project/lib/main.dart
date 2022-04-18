@@ -9,6 +9,7 @@ import 'cameraScreen.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:camera/camera.dart';
+import 'postReq.dart';
 
 Future<void> main() async {
   // Ensure that plugin services are initialized so that `availableCameras()`
@@ -128,6 +129,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: const Icon(Icons.settings),
+                    )),
+                Container(
+                    margin: EdgeInsets.only(top: 20, left: 10, right: 10),
+                    child: FloatingActionButton(
+                      heroTag: "post",
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PostReq()),
+                        );
+                      },
+                        child: const Text("POST"),
                     )),
               ],
             ),

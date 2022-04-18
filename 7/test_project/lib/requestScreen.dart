@@ -17,13 +17,13 @@ class UsersPage extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<List<Post>> snapshot) {
           if (snapshot.hasData) {
             List<Post>? posts = snapshot.data;
-            if(posts != null){
+            if (posts != null) {
               return ListView(
                 children: posts
                     .map(
                       (Post post) => ListTile(
-                    title: Text(post.first_name),
-                    subtitle: Text("${post.email}"),
+                        title: Text(post.first_name),
+                        subtitle: Text("${post.email}"),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) => PostDetail(
@@ -31,8 +31,8 @@ class UsersPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                  ),
-                )
+                      ),
+                    )
                     .toList(),
               );
             } else {
