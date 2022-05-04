@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:provider/provider.dart';
 import 'package:test_project/requestScreen.dart';
@@ -71,6 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
   });
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Consumer<PreferencesModel>(
         builder: (context, PreferencesModel themeNotifier, child) {
           return Scaffold(
